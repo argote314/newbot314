@@ -33,7 +33,7 @@ const vcard = 'BEGIN:VCARD\n'
             + 'VERSION:3.0\n' 
             + 'FN:Affis Admin\n' 
             + 'ORG: Pengembang XBot;\n' 
-            + 'TEL;type=CELL;type=VOICE;waid=6282334297175:+62 823-3429-7175\n' 
+            + 'TEL;type=CELL;type=VOICE;waid=51916659:+51 916-659-000\n' 
             + 'END:VCARD' 
 prefix = '#'
 blocked = []          
@@ -43,7 +43,7 @@ blocked = []
 /********** END FILE ***************/
   
 const time = moment().tz('Asia/Jakarta').format("HH:mm:ss")
-const arrayBulan = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember']
+const arrayBulan = ['Enero ',' Febrero ',' Marzo ',' Abril ',' Mayo ',' Junio ',' Julio ',' Agosto ',' Septiembre ',' Octubre ',' Noviembre ',' Diciembre']
 const bulan = arrayBulan[moment().format('MM') - 1]
 const config = {
     XBOT: '⸙ꦿꦼ͢ ƇƛNƇHƖƬƛ➥', 
@@ -154,7 +154,7 @@ client.on('group-participants-update', async (anu) => {
 				wait: '❬❗❭ 𝗘𝗦𝗣𝗘𝗥𝗘, 𝗣𝗥𝗢𝗖𝗘𝗦𝗢 𝗟𝗔𝗥𝗚𝗢',
 				success: '️❬ ✔ ❭ 𝗘𝗫𝗜𝗧𝗢 🖤',
 				error: {
-					stick: 'Bueno, falló ;( , intenta repetir :v ',
+					stick: 'Bueno falló ;( , intenta repetir :v ',
 					Iv: '𝗟𝗼 𝘀𝗶𝗲𝗻𝘁𝗼 𝗲𝗻𝗹𝗮𝗰𝗲 𝗶𝗻𝘃𝗮́𝗹𝗶𝗱𝗼'
 				},
 				only: {
@@ -337,7 +337,7 @@ client.on('group-participants-update', async (anu) => {
 				case 'anime':
 					teks = body.slice(7)
 					anu = await fetchJson(`https://mnazria.herokuapp.com/api/anime?query=${teks}`, {method: 'get'})
-					reply('anime nya ni '+teks+' adalah :\n\n'+anu.title)
+					reply('el anime '+teks+' es :\n\n'+anu.title)
 					break
                 case 'neko':
                     anu = await fetchJson(`https://arugaz.herokuapp.com/api/nekonime` , {method: 'get'})
